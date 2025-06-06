@@ -40,7 +40,7 @@ Applies the academia and wideTable classes.</br>
 </br>
 
 ## Usage
-Download the tableStyles.css file from this repository.
+Download the [`tableStyles.css`](https://github.com/drusho/obsidian-modifications/blob/main/CSS%20Snippets/tableStyles/tableStyles.css) file from this repository.
 
 1. In Obsidian, go to Settings > Appearance.
 2. Place the file, `tableStyles.css`, in your vault's .obsidian/snippets directory.  Click on the folder to open this directory.
