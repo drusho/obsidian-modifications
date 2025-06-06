@@ -18,5 +18,8 @@ For example for CSS Snippets, the general process is:
 3. In Obsidian, go to Settings > Appearance.
 4. Under the "CSS snippets" section, enable the snippet you added.
 
+</br>
+
 ---
-[Link text](relative/path/to/file#unique-anchor-name)
+
+Visit my website, [davidrusho.com](http://www.davidrusho.com), for other Obsidian modifications and custom setups.
