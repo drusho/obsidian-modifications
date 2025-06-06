@@ -49,14 +49,25 @@ Download the [`tableStyles.css`](https://github.com/drusho/obsidian-modification
 <img src="https://github.com/drusho/obsidian-modifications/blob/main/assets/css_style_instructions.png?raw=true" height="300"></br>
 
 </br>
-4. In your Obisidian note(s) add a `cssclasses` section to your properties at the top of your note.  Type in the table css styles you want to use.  This part can be automated with a template file used with [Templater](https://silentvoid13.github.io/Templater/introduction.html) .  Just install it from the Obisidan Community Plugins section
+
+4. Under the "CSS snippets" section, enable the snippet you added.
+
+## Applying a Style (Per-Note)
+
+To activate a specific style on a note, add the cssclasses property to the note's frontmatter (at the very top of the file). You can add one or multiple classes to combine styles.
+
+> [!TIP]
+> This can be automated by creating a note template with the [Templater](https://silentvoid13.github.io/Templater/introduction.html) plugin, available in the Obsidian Community Plugins section.
+
 
 </br>
 
-### Properties Examples
+### Style Examples
 
-**Academia Rounded**
-```
+**Academia Rounded**</br>
+Add the following to your note's properties:
+
+```yaml
 ---
 date: 2025-06-05
 cssclasses:
@@ -66,8 +77,9 @@ cssclasses:
 ```
 
 **Academia Wide**</br>
+Add the following to your note's properties:
 
-```
+```yaml
 ---
 date: 2025-06-05
 cssclasses:
@@ -75,3 +87,9 @@ cssclasses:
 - wideTable
 ---
 ```
+
+</br>
+
+---
+
+Visit my website, [davidrusho.com](http://www.davidrusho.com), for other Obsidian modifications and custom setups.
