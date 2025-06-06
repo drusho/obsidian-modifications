@@ -48,3 +48,30 @@ Download the [`tableStyles.css`](https://github.com/drusho/obsidian-modification
 
 <img src="https://github.com/drusho/obsidian-modifications/blob/main/assets/css_style_instructions.png?raw=true" height="300"></br>
 
+</br>
+4. In your Obisidian note(s) add a `cssclasses` section to your properties at the top of your note.  Type in the table css styles you want to use.  This part can be automated with a template file used with [Templater](https://silentvoid13.github.io/Templater/introduction.html) .  Just install it from the Obisidan Community Plugins section
+
+</br>
+
+### Properties Examples
+
+**Academia Rounded**
+```
+---
+date: 2025-06-05
+cssclasses:
+- academia
+- academia-rounded
+---
+```
+
+**Academia Wide**</br>
+
+```
+---
+date: 2025-06-05
+cssclasses:
+- academia
+- wideTable
+---
+```

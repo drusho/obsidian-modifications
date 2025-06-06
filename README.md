@@ -19,4 +19,4 @@ For example for CSS Snippets, the general process is:
 4. Under the "CSS snippets" section, enable the snippet you added.
 
 ---
-Visit my site, [davidrusho.com](https//:www.davidrusho.com), for other Obsidian modifications and custom setups.
+[Link text](relative/path/to/file#unique-anchor-name)
