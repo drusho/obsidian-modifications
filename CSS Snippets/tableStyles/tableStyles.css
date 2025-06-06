@@ -1,0 +1,176 @@
+/*
+ * Original Author: @DeaconLight & Obsidian Community contributors
+ * Original Source: https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084/38
+ * Description:     A collection of theme-aware custom table styles for Obsidian.
+ * Usage:           Save this file as `tables.css` in your vault's `.obsidian/snippets` directory, then enable it under 
+ *                  Settings > Appearance.
+ * Modified by:     David Rusho
+ * Created:         2025-06-05
+ * Docs:            https://help.obsidian.md/Extending+Obsidian/CSS+snippets
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+:root {
+  --table-header-bg: #f0f0f0;
+  --table-hover-bg: #e9e9e9;
+  --table-text: #222;
+  --table-header-text: #111;
+  --table-even-bg: #f9f9f9;
+  --table-border: #222;
+  --table-radius: 5px;
+  --table-padding: 10px;
+  --table-font: "Roboto", sans-serif;
+  --table-font-size: 12px;
+  --table-rounded-border: #b3b3b3;
+  --table-rounded-row-border: #ccccccbb;
+}
+
+/* Dark Theme Table Styles */
+body.theme-dark {
+  --table-header-bg: #1e1e1e;
+  --table-hover-bg: #4a4a4a;
+  --table-text: #dcdcdc;
+  --table-header-text: #f0f0f0;
+  --table-even-bg: #333333;
+  --table-border: #666;
+}
+
+/* Obsidian default theme uses centered headers? */
+table thead tr th {
+  text-align: left;
+}
+
+/* Make tables width same as default note width   */
+.wideTable table {
+  min-width: 100%;
+}
+
+/* Left align mandatory                           */
+.leftAlign th,
+.leftAlign td {
+  text-align: left !important;
+}
+
+/* 1st cell short text, 2nd th bigger text        */
+.fixedFc thead tr th:first-child,
+.fixedFc tbody tr td:first-child {
+  width: 8em;
+  min-width: 8em;
+  max-width: 8em;
+  word-break: break-all;
+}
+
+.fixedFc th:nth-child(2) {
+  padding: 9px 20px;
+  font-size: 21px;
+}
+
+.fixedFc td:nth-child(2),
+.fixedFc tr > td:last-of-type {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 17em;
+}
+
+/* 1st cell big text, 2nd small.                  */
+.wideFc td:nth-child(1),
+.wideFc tr > td:last-of-type {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 36em;
+}
+
+/* If you wanna change table margin, do it here   */
+.customMargin table {
+  margin: 25px 0;
+}
+
+/*======Table styles======= */
+
+/* Academia (Latex) Table-layout */
+.academia table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+  max-width: 100%;
+  overflow-x: auto;
+  border-top: 2px solid var(--table-border);
+  border-bottom: 2px solid var(--table-border);
+
+  /* White background for light mode */
+  background-color: #fff;
+}
+
+.academia th,
+.academia td {
+  border: none;
+  padding: 0.75rem !important;
+  line-height: 1.3;
+  text-align: left;
+  font-family: var(--table-font);
+  font-size: var(--table-font-size);
+}
+
+.academia td {
+  color: var(--table-text);
+}
+
+.academia thead th {
+  background-color: var(--table-header-bg) !important;
+  color: var(--table-header-text) !important;
+  font-weight: 700;
+  border-bottom: 1px solid var(--table-border);
+}
+
+.academia tbody tr:nth-child(even) {
+  background-color: var(--table-even-bg);
+}
+
+.academia tbody tr:hover td {
+  background-color: var(--table-hover-bg);
+  color: var(--table-header-text);
+}
+
+/* Specific overrides for the custom dark theme */
+body.theme-dark .academia table {
+  background-color: #282828;
+}
+
+body.theme-dark .academia td {
+  color: var(--table-text);
+}
+
+body.theme-dark .academia thead th {
+  background-color: var(--table-header-bg) !important;
+  color: var(--table-header-text) !important;
+  border-bottom: 1px solid var(--table-border);
+}
+
+body.theme-dark .academia tbody tr:nth-child(even) {
+  background-color: var(--table-even-bg);
+}
+
+body.theme-dark .academia tbody tr:hover td {
+  background-color: var(--table-hover-bg);
+  color: var(--table-header-text);
+}
+
+/* --- Rounded Table Variant (Theme-Aware) --- */
+.academia-rounded table {
+  border-collapse: separate;
+  border: 1px solid var(--table-rounded-border);
+  border-radius: 6px;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.academia-rounded thead th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.academia-rounded thead th:last-child {
+  border-top-right-radius: 5px;
+}
